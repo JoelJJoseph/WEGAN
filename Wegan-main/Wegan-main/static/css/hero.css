@@ -1,0 +1,18 @@
+.hero{
+    background-color: #0E1117;
+    padding-top: 120px;
+    padding-bottom: 70px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero .headName{
+    color: #fff;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.hero .headPara{
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,20 @@
+.section{
+    font-family: 'Poppins', sans-serif;
+    background-color:#0E1117;
+    padding-top: 130px;
+}
+
+.section .sectionHead{
+    color: #fff;
+    padding-left:80px;
+    padding-right:80px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.section .sectionPara{
+    color: #fff;
+    padding-left:80px;
+    padding-right:80px;
+    font-size: 20px;
+}

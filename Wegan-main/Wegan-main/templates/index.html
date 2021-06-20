@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/hero.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/button.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/section.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/weather.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>WEGAN</title>
+  </head>
+  <body>
+    <div class="navbarstyle">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <h6 class="navbar-brand">W E G A N</h6>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href=".">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dosanddonts">Do's & Dont's</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Disease">Disease</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#chatbot">ChatBot</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="headName">
+              The fastest way to identify plants diseases
+            </h1>
+            <p class="headPara">
+              Wegan identifies the plant disease and gives solutions
+            </p>
+            <button
+              class="btn btnoutline"
+              onclick="window.location='./Disease'"
+              type="submit"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="col-lg-6 align-iems-right weatherapi">
+            <div class="card">
+              <div class="search">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
+                    width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                  </svg></button>
+              </div>
+              <div class="weather loading">
+                <h2 class="city">Weather in Chennai</h2>
+                <h1 class="temp">32°C</h1>
+                <div class="flex">
+                  <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                  <div class="description">Sunny</div>
+                </div>
+                <div class="humidity">Humidity: 30%</div>
+                <div class="wind">Wind speed: 6.2 km/h</div>
+                <div><p> </p></div>
+                <div class="notification">Have a nice day</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="container-fluid section" id="dosanddonts">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-5">
+              <img
+                class="img-fluid"
+                alt="img"
+                src="{% static 'images/sectionImage.svg' %}"
+              />
+            </div>
+            <div class="col-lg-7">
+              <h1 class="sectionHead">Do's and Don'ts</h1>
+              <p class="sectionPara">
+                The Algorithm works well with a single leaf at a time, so try
+                uploading images with one leaf. The Algorithm won't predict when
+                more leaves in one image, it is good at predicting one leaf at a
+                time
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid section">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-7">
+              <h1 class="sectionHead">Notice</h1>
+              <p class="sectionPara">WEGAN identifies whether the plant is healthy or diseased based on the leaf.  As of now, it works for grapes, tomatoes and pepper bell. And the diseases it detects are bacterial spot, early blight, black rot.</p>
+            </div>
+            <div class="col-lg-5">
+              <img
+                class="img-fluid"
+                alt="img"
+                src="{% static 'images/sectionImage2.svg' %}"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid section" id="chatbot">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-5">
+              <iframe
+              width="350"
+              height="430"
+              allow="microphone;"
+              src="https://console.dialogflow.com/api-client/demo/embedded/03f22b92-3e5c-4185-ad15-b075671a8b94"
+            ></iframe>
+            </div>
+            <div class="col-lg-7">
+              <h1 class="sectionHead">WEGAN Chatbot</h1>
+              <p class="sectionPara">
+                Our conversation friendly chatbot answers your questions
+                regarding your plants. You can get suggestions on disease
+                control, plant specific fertilizers, pests control and growth
+                conditions. It also provides you with the link to know more
+                about your doubts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script >
+      let weather = {
+        apiKey: "3b6117b32e352bc62f00c8a115a9e2cb",
+        fetchWeather: function (city) {
+          fetch(
+            "https://api.openweathermap.org/data/2.5/weather?q=" +
+              city +
+              "&units=metric&appid=" +
+              this.apiKey
+          )
+            .then((response) => {
+              if (!response.ok) {
+                alert("No weather found.");
+                throw new Error("No weather found.");
+              }
+              return response.json();
+            })
+            .then((data) => this.displayWeather(data));
+        },
+        displayWeather: function (data) {
+          const { name } = data;
+          const { id, icon, description } = data.weather[0];
+          const { temp, humidity } = data.main;
+          const { speed } = data.wind;
+          document.querySelector(".city").innerText = "Weather in " + name;
+          document.querySelector(".icon").src =
+            "https://openweathermap.org/img/wn/" + icon + ".png";
+          document.querySelector(".description").innerText = description;
+          document.querySelector(".temp").innerText = temp + "°C";
+          document.querySelector(".humidity").innerText =
+            "Humidity: " + humidity + "%";
+          document.querySelector(".wind").innerText =
+            "Wind speed: " + speed + " km/h";
+          document.querySelector(".weather").classList.remove("loading");
+          if (id < 300) {
+            greeting = "Watchout for "+ description+ " Mate! Your plants gonna enjoy the rain.";
+          } else if (id < 502) {
+            greeting = "Hey Budding Gardener! You and your small plants enjoy some "+ description +". But remember to water the bigger ones.";
+          } else if (id < 600) {
+            greeting = "Uh-oh. There's "+ description+ ". Fret not my friend, your plants will be watered.";
+          } else if (id < 700) {
+            greeting = "Ready to make snow angels? Before that cover your plants with old clothes or tarps. They might not enjoy snow as you do";
+          } else {
+            greeting = "Ah! Nice weather isn't it? As always, water your plants with love and care :)";
+          }
+          document.querySelector(".notification").innerText = greeting;
+        },
+        search: function () {
+          this.fetchWeather(document.querySelector(".search-bar").value);
+        },
+      };
+      
+      document.querySelector(".search button").addEventListener("click", function () {
+        weather.search();
+      });
+      
+      document
+        .querySelector(".search-bar")
+        .addEventListener("keyup", function (event) {
+          if (event.key == "Enter") {
+            weather.search();
+          }
+        });
+      
+      weather.fetchWeather("Chennai");
+    </script>
+  </body>
+</html>
